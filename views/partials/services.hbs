@@ -1,0 +1,15 @@
+<div id="services">
+  <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+      {{#each data}}
+      <div>
+        <i class="{{this.iconClass}}"></i>
+        <h2>{{this.heading}}</h2>
+        <p>{{this.description}}</p>
+        <a href="{{this.linkUrl}}">{{this.linkText}}</a>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+      {{#each data.work}}
+      <div class="work">
+        <img src="{{this.imgUrl}}" alt="" />
+        <div class="layer">
+          <h3>{{this.heading}}</h3>
+          <p>{{this.description}} </p>
+          <a href="{{this.linkUrl}}"><i class="{{linkiconClass}}"></i></a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    <a href="{{data.moreLinkUrl}}" class="btn">{{data.moreLinkText}}</a>
+  </div>
+</div>

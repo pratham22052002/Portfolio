@@ -1,0 +1,34 @@
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+
+        <p> <i class="{{data.emailIconClass}}"></i>{{data.email}}</p>
+        <p><i class="{{data.phoneIconClass}}"></i>{{data.phoneNumber}}</p>
+        <div class="social-icons">
+          {{#each data.socialContact}}
+          <a href="{{this.linkUrl}}"><i class="{{this.iconClass}}"></i></a>
+          {{/each}}
+        </div>
+        <a href="{{data.cvPdfUrl}}" download class="btn btn-2">{{data.btnText}}</a>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required />
+          <input type="text" name="Email" placeholder="Your Email" required />
+          <textarea
+            name="Message"
+            rows="6"
+            placeholder="Your Message"
+          ></textarea>
+          <button type="submit" class="btn btn-2">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>{{data.copyright}}</p>
+  </div>
+</div>

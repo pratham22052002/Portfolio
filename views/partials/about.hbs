@@ -1,0 +1,39 @@
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src={{data.imageUrl}} alt="" />
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>{{data.description}}</p>
+        <div class="tab-title">
+          <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+          <p class="tab-links" onclick="openTab('exprience')">Exprience</p>
+          <p class="tab-links" onclick="openTab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            {{#each data.skills}}
+            <li><span>{{this.heading}}</span><br />{{this.shortLine}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="tab-contents" id="exprience">
+          <ul>
+           {{#each data.exprience}}
+            <li><span>{{this.heading}}</span><br />{{this.shortLine}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            {{#each data.education}}
+            <li><span>{{this.heading}}</span><br />{{this.shortLine}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
